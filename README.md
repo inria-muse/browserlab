@@ -31,13 +31,6 @@ gz-compressed trace, and sockets.
 See: http://research.wand.net.nz/software/libtrace.php
 
 
-### sysstat  
-
-Performance monitoring tools for Linux.
-
-See: https://github.com/sysstat/sysstat
-
-
 ### libtrace-tools-extra
 
 A collection of libtrace (and libtcptools) based trace utilities:
@@ -46,6 +39,13 @@ A collection of libtrace (and libtcptools) based trace utilities:
   * tracertt: in/out RTTs based on TCP data-ack packet pairs
 
 See: https://github.com/apietila/libtrace-tools-extra
+
+
+### sysstat  
+
+Performance monitoring tools for Linux.
+
+See: https://github.com/sysstat/sysstat
 
 
 
