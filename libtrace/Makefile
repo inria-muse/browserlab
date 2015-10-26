@@ -30,10 +30,9 @@ define Package/libtrace
 endef
 
 define Package/libtrace/description
-	Network trace processing library supporting many input formats 
-	libtrace is a library for trace processing. It supports multiple 
+	Network trace processing library for trace processing. Supports multiple 
 	input methods, including device capture, raw and gz-compressed 
-	trace, and sockets; and multiple input formats.
+	trace, and sockets.
 endef
 
 define Package/libtrace-tools
@@ -45,10 +44,7 @@ define Package/libtrace-tools
 endef
 
 define Package/libtrace-tools/description
-	Network trace processing tools supporting many input formats 
-	libtrace is a library for trace processing. It supports multiple 
-	input methods, including device capture, raw and gz-compressed 
-	trace, and sockets; and multiple input formats.
+	Network trace processing tools for trace processing.
 endef
 
 CONFIGURE_ARGS += \

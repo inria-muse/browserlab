@@ -12,12 +12,12 @@ PKG_VERSION:=2.0.6
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=git://github.com/apietila/iperf-ng.git
-PKG_SOURCE:=$(PKG_NAME).tar.gz
+PKG_SOURCE_URL:=https://github.com/apietila/iperf-ng.git
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_VERSION:=HEAD
-PKG_SOURCE_SUBDIR:=$(PKG_NAME)
+PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 
-PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
+PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
 include $(INCLUDE_DIR)/uclibc++.mk
 include $(INCLUDE_DIR)/package.mk
@@ -26,7 +26,7 @@ define Package/iperfng/Default
   SECTION:=net
   CATEGORY:=Network
   DEPENDS:= $(CXX_DEPENDS)
-  TITLE:=Internet Protocol bandwidth measuring tool
+  TITLE:=Internet Protocol bandwidth measurement tool
   URL:=https://github.com/apietila/iperf-ng
 endef
 
