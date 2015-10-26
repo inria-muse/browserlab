@@ -55,23 +55,23 @@ See: https://github.com/apietila/libtrace-tools-extra
 
   2. Configure the 'browserlab' custom feed to your feeds.conf (http://wiki.openwrt.org/doc/devel/feeds):
 
-```
+	```
 	src-git browserlab https://github.com/inria-muse/browserlab.git
-```
+	```
 
   3. Update and install selected packages from the 'browserlab' feed
 
-```
+	```
 	[path/to/openwrt/]$ ./scripts/feeds update browserlab
 	[path/to/openwrt/]$ ./scripts/feeds install -p browserlab <package>
 	[path/to/openwrt/]$ make menuconfig 
-```
+	```
 
   4. Select the installed packages in the menu config tool
 
   5. Build the packages 
 
-```
+	```
 	[path/to/openwrt/]$ make package/<package>/compile V=s 
-```
+	```
 
