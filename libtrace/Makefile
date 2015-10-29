@@ -4,9 +4,13 @@ PKG_NAME:=libtrace
 PKG_VERSION:=3.0.22
 PKG_RELEASE:=1
 
+PKG_SOURCE_PROTO:=git
+PKG_SOURCE_URL:=https://github.com/apietila/libtrace.git
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=http://research.wand.net.nz/software/libtrace/
-PKG_MD5SUM:=836d31a946c68c3df8fad72eb3085743
+PKG_SOURCE_VERSION:=HEAD
+PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
+
+PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
 PKG_INSTALL:=1
 PKG_FIXUP:=autoreconf
