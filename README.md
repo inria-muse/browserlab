@@ -5,6 +5,9 @@ OpenWRT package feed for various network measurement tools and APIs.
 
 ## Contents
 
+### collectd
+
+Modified collectd 5.5.0 with libtrace based LAN and WAN monitoring modules.
 
 ### iperfng  
 
