@@ -20,8 +20,6 @@ PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_FIXUP:=autoreconf
 PKG_REMOVE_FILES:=aclocal.m4 libltdl/aclocal.m4
 
-#PKG_MAINTAINER:=Jo-Philipp Wich <jow@openwrt.org>
-
 PKG_INSTALL:=1
 PKG_BUILD_PARALLEL:=1
 PKG_USE_MIPS16:=0
@@ -156,6 +154,7 @@ COLLECTD_PLUGINS_SELECTED:= \
 	wireless \
 	write_graphite \
 	write_http \
+	write_irmin \
 
 PKG_CONFIG_DEPENDS:= \
 	$(patsubst %,CONFIG_PACKAGE_collectd-mod-%,$(subst _,-,$(COLLECTD_PLUGINS_SELECTED))) \
@@ -352,3 +351,4 @@ $(eval $(call BuildPlugin,vmem,virtual memory usage input,vmem,))
 $(eval $(call BuildPlugin,wireless,wireless status input,wireless,))
 $(eval $(call BuildPlugin,write-graphite,Carbon/Graphite output,write_graphite,+PACKAGE_collectd-mod-write-graphite:libpthread))
 $(eval $(call BuildPlugin,write-http,HTTP POST output,write_http,+PACKAGE_collectd-mod-write-http:libcurl))
+$(eval $(call BuildPlugin,write-irmin,irmin output,write_irmin,+PACKAGE_collectd-mod-write-irmin:libcurl))
