@@ -15,20 +15,20 @@ PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
 include $(INCLUDE_DIR)/package.mk
 
 define Package/libtrace-tools-extra
-        SECTION:=net
-        CATEGORY:=Network
-        DEPENDS:=+libtrace +libtcptools
-        TITLE:=libtrace-tools-extra
+	SECTION:=net
+	CATEGORY:=Network
+	DEPENDS:=+libtrace +libtcptools
+	TITLE:=libtrace-tools-extra
 endef
 
 define Package/libtrace-tools-extra/description
-        Libtrace based tools for packet trace analysis.
+	Libtrace based tools for packet trace analysis.
 endef
 
 define Package/libtrace-tools-extra/install
-        $(INSTALL_DIR) $(1)/usr/bin
-        $(INSTALL_BIN) $(PKG_BUILD_DIR)/tracepktiv $(1)/usr/bin/
-        $(INSTALL_BIN) $(PKG_BUILD_DIR)/tracertt $(1)/usr/bin/
+	$(INSTALL_DIR) $(1)/usr/bin
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/tracepktiv $(1)/usr/bin/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/tracertt $(1)/usr/bin/
 endef
 
 $(eval $(call BuildPackage,libtrace-tools-extra))
